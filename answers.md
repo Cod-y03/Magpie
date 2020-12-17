@@ -1,0 +1,1 @@
+##I understand how this new system uses Strings and index of to check if there are spaces around the key word to insure it isnt another word all together##

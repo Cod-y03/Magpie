@@ -29,13 +29,16 @@ public class Magpie3 {
 		String response = "";
 		if (statement.length() == 0) {
 			response = "Say something, please.";
-		} else if (findKeyword(statement, "no") >= 0) {
+		} else if (findKeyword(statement, "no", 0) >= 0) {
 			response = "Why so negative?";
 		} else if (findKeyword(statement, "mother") >= 0
 				|| findKeyword(statement, "father") >= 0
 				|| findKeyword(statement, "sister") >= 0
 				|| findKeyword(statement, "brother") >= 0) {
 			response = "Tell me more about your family.";
+		} else if (findKeyword(statement, "cat", 0) >= 0 
+		|| findKeyword(statement, "dog", 0) >= 0) {
+			response = "What other pets do you have";
 		} else {
 			response = getRandomResponse();
 		}
